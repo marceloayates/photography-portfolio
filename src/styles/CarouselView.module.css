@@ -1,0 +1,25 @@
+/* CarouselView.module.css */
+.carouselView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.photoImage {
+  max-width: 800px; /* Add this line */
+  max-height: 100%;
+  object-fit: contain;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  align-self: flex-start
+}
+
+.subtitleText {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.5rem;
+  align-self: flex-start;
+}
+

@@ -1,0 +1,43 @@
+.navigationContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-self: flex-start; /* Add this line */
+  max-width: 800px; /* Add this line */
+  width: 800px; /* Add this line */
+}
+
+.navigationLink {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navigationLink:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.imageIndexText {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.gridToggleIcon {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: auto; /* Add this line */
+}
+
+.gridToggleIcon:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}

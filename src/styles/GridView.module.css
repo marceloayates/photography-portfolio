@@ -1,0 +1,30 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  max-width: 800px;
+  width: 100%;
+}
+
+.gridImage {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.gridToggleIcon {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: auto; /* Add this line */
+}
+
+.gridToggleIcon:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
