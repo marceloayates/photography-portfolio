@@ -7,7 +7,7 @@ import AboutPage from './components/AboutPage';
 import Menu from './components/Menu';
 import photoData from './assets/photoData.jsx';
 import styles from './styles/App.module.css';
-import GlobalStyles from './GlobalStyles';
+import GlobalStyles from './styles/GlobalStyles';
 
 function App() {
     const landscapePhotos = photoData.filter(photo => photo.category === 'landscape');
@@ -18,7 +18,7 @@ function App() {
             <GlobalStyles />
             <div className={styles.app}>
                 <Link to="/">
-                <h1 className={styles.title}>Marcelo Yates</h1>
+                <p className={styles.title}>Marcelo Yates</p>
                 </Link>
                 <div className={styles.contentContainer}>
                     <Menu />

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import GalleryCarousel from './GalleryCarousel';
+import NavigationControls from './NavigationControls';
 import CarouselView from './CarouselView';
 import GridView from './GridView';
 import Modal from './Modal';
@@ -35,6 +35,14 @@ const GalleryPage = ({ title, photos }) => {
 
     return (
         <div>
+          <NavigationControls
+            handlePrevPhoto={handlePrevPhoto}
+            handleNextPhoto={handleNextPhoto}
+            activePhotoIndex={activePhotoIndex}
+            totalPhotos={photos.length}
+            toggleGridView={toggleGridView}
+            isGridView={isGridView}
+          />
         {isGridView ? (
           <GridView
             photos={photos}

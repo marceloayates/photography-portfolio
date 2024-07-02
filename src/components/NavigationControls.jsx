@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaThLarge, FaTimes } from 'react-icons/fa';
 import styles from '../styles/NavigationControls.module.css';
 
 const NavigationControls = ({
@@ -7,6 +8,7 @@ const NavigationControls = ({
   activePhotoIndex,
   totalPhotos,
   toggleGridView,
+  isGridView
 }) => {
   return (
     <div className={styles.navigationContainer}>
@@ -15,7 +17,7 @@ const NavigationControls = ({
       <span className={styles.imageIndexText}>
         {activePhotoIndex + 1} out of {totalPhotos}
       </span>
-      <span className={styles.gridToggleIcon} onClick={toggleGridView}>Grid View</span>
+      <span className={styles.gridToggleIcon} onClick={toggleGridView}>{isGridView ? <FaTimes /> : <FaThLarge />}</span>
     </div>
   );
 };

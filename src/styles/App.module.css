@@ -36,10 +36,9 @@ body {
 }
 
 .title {
-  top: 40px; /* Increase the top margin */
-  left: 20px;
   margin: 0;
   font-family: 'Times New Roman', serif;
+  color: rgb(135, 6, 6);
 }
 
 .carousel {

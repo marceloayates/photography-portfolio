@@ -9,8 +9,8 @@
 }
 
 .navigationLink {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
+  color: #000;
+  /* background-color: rgba(0, 0, 0, 0.5); */
   padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
@@ -18,26 +18,22 @@
 }
 
 .navigationLink:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  color: rgb(135, 6, 6);
 }
 
 .imageIndexText {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
+  color: #000;
   padding: 0.5rem 1rem;
   border-radius: 4px;
 }
 
 .gridToggleIcon {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 0.5rem;
-  border-radius: 4px;
+  color: #000;
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-left: auto; /* Add this line */
 }
 
 .gridToggleIcon:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  color: rgb(135, 6, 6);
 }
