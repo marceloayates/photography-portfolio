@@ -1,9 +1,10 @@
 /* App.module.css */
-.App {
+.app {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   display: flex;
+  flex-direction: column;
 }
 
 .title {
@@ -14,23 +15,26 @@
   text-decoration: none;
 }
 
-.mobileTitle {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  color: rgb(135, 6, 6);
-  padding: 15px;
-  text-align: left;
-  z-index: 1000; /* Ensure the title is on top of other elements */
-}
-
-
 .contentContainer {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
+  margin-top: 0; /* Remove the top margin */
 }
 
-
+@media (max-width: 768px) {
+  /* Styles for mobile devices */
+  .mobileTitle {
+    display: block; /* Show the mobile title on mobile devices */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: rgb(135, 6, 6);
+    padding: 15px;
+    text-align: left;
+    z-index: 1000;
+    background-color: white;
+  }
+}

@@ -19,8 +19,7 @@
 }
 
 .tabs a.active {
-  background-color: #333;
-  color: #fff;
+  color: rgb(135, 6, 6); /* Change the color of the active link */
 }
 
 .verticalTab {
@@ -62,7 +61,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 200px;
+    width: 150px;
     height: 100%;
     background-color: #fff;
     padding: 20px;

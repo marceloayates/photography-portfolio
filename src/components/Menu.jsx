@@ -18,19 +18,19 @@ const Menu = () => {
     <div>
       <div className={styles.desktopMenu}>
         <nav className={styles.tabs}>
-          <NavLink to="/Abstract" className={styles.tabs} onClick={closeMobileMenu}>
+          <NavLink to="/Abstract" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs}>
             Abstract
           </NavLink>
-          <NavLink to="/landscape" className={styles.tabs} onClick={closeMobileMenu}>
+          <NavLink to="/landscape" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs}>
             Landscape
           </NavLink>
-          <NavLink to="/monochrome" className={styles.tabs} onClick={closeMobileMenu}>
+          <NavLink to="/monochrome" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs}>
             Monochrome
           </NavLink>
-          <NavLink to="/portraits" className={styles.tabs} onClick={closeMobileMenu}>
+          <NavLink to="/portraits" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs}>
             Portraits
           </NavLink>
-          <NavLink to="/about" className={styles.tabs} onClick={closeMobileMenu}>
+          <NavLink to="/about" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs}>
             About
           </NavLink>
         </nav>
