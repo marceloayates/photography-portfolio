@@ -7,15 +7,21 @@ const Tabs = () => {
     return (
         <div>
             <nav className={styles.tabs}>
+                <NavLink to="/Abstract" className={styles.tabs}>
+                    Abstract
+                </NavLink>
                 <NavLink to="/landscape" className={styles.tabs}>
                     Landscape
+                </NavLink>
+                <NavLink to="/monochrome" className={styles.tabs}>
+                    Monochrome
                 </NavLink>
                 <NavLink to="/portraits" className={styles.tabs}>
                     Portraits
                 </NavLink>
-                <NavLink to="/contact" className={styles.tabs}>
+                {/* <NavLink to="/contact" className={styles.tabs}>
                     Contact
-                </NavLink>
+                </NavLink> */}
                 <NavLink to="/about" className={styles.tabs}>
                     About
                 </NavLink>

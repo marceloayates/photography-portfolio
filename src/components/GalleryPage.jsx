@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import NavigationControls from './NavigationControls';
 import CarouselView from './CarouselView';
 import GridView from './GridView';
@@ -7,6 +7,11 @@ import Modal from './Modal';
 const GalleryPage = ({ title, photos }) => {
     const [activePhotoIndex, setActivePhotoIndex] = useState(0);
     const [isGridView, setIsGridView] = useState(false);
+
+    useEffect(() => {
+      // Reset activePhotoIndex whenever the photos prop changes
+      setActivePhotoIndex(0);
+    }, [photos]);
 
     const handlePrevPhoto = () => {
       setActivePhotoIndex((prevIndex) => (prevIndex === 0 ? photos.length - 1 : prevIndex - 1));

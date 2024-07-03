@@ -5,29 +5,33 @@ import styles from '../styles/AboutPage.module.css';
 const AboutMe = () => {
   const aboutText = (
     <>
-      Hello!<br /><br />
-      With over 15 years of seasoned expertise in photography and a comprehensive education from the Austin School of Photography, I bring a refined skill set and an unwavering commitment to capturing compelling images. I meticulously craft images by using and combining different techniques involving the three main constructs in photography: time, depth of field, and light.<br /><br /><br />
-      Services offered:<br /><br />
-      - Portrait<br />
-      - Creative studio shoot<br />
-      - Outdoor shoot<br />
-      - Couples<br />
-      - Corporate headshot<br />
-      - Events<br />
-      - Sports<br /><br /><br />
-      I am able to travel to locations within Austin and surrounding areas. I have equipment that allows me to do work in a variety of settings, so please ask me about any specific needs you have!<br /><br />
-      Let's collaborate to bring your visual ideas to life with precision and artistry.
+      <h2>Hello!</h2>
+      <p>
+        With over 15 years of seasoned expertise in photography and a comprehensive education from the Austin School of Photography, I bring a refined skill set and an unwavering commitment to capturing compelling images. I meticulously craft images by using and combining different techniques involving the three main constructs in photography: time, depth of field, and light.
+      </p>
+      <h3>Services offered:</h3>
+      <ul>
+        <li>Portrait</li>
+        <li>Creative studio shoot</li>
+        <li>Outdoor shoot</li>
+        <li>Couples</li>
+        <li>Corporate headshot</li>
+        <li>Events</li>
+        <li>Sports</li>
+      </ul>
+      <p>
+        I am able to travel to locations within Austin and surrounding areas. I have equipment that allows me to do work in a variety of settings, so please ask me about any specific needs you have!
+      </p>
+      <p>Let's collaborate to bring your visual ideas to life with precision and artistry.</p>
     </>
   );
 
   return (
-    <div className={styles['about-me']}>
-      <div className={styles['profile-photo']}>
-        <img src={profilePhoto} alt="Profile" />
+    <div className={styles.aboutContainer}>
+      <div className={styles.profilePhotoContainer}>
+        <img src={profilePhoto} alt="Profile" className={styles.profilePhoto} />
       </div>
-      <div className={styles['about-text']}>
-        <p>{aboutText}</p>
-      </div>
+      <div className={styles.aboutText}>{aboutText}</div>
     </div>
   );
 };

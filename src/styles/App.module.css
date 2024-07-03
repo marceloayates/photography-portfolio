@@ -1,22 +1,4 @@
 /* App.module.css */
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-.sidebar {
-  width: 200px; /* Adjust as needed */
-  background-color: #f0f0f0; /* Adjust as needed */
-  padding: 20px;
-}
-
-.content {
-  flex: 1;
-  padding: 20px;
-}
-
 .App {
   max-width: 1200px;
   margin: 0 auto;
@@ -24,40 +6,12 @@ body {
   display: flex;
 }
 
-.App h1 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.App h1 a {
-  text-decoration: none;
-  color: inherit;
-}
-
 .title {
   margin: 0;
   font-family: 'Times New Roman', serif;
   color: rgb(135, 6, 6);
-}
-
-.carousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.carousel-item {
-  max-width: 800px;
-  margin: 0 10px;
-}
-
-.carousel-item img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+  font-size: 24px;
+  text-decoration: none;
 }
 
 .contentContainer {
