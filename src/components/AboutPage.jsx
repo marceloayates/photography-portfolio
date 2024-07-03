@@ -1,6 +1,8 @@
 import React from 'react';
-import profilePhoto from '../assets/profile.jpg';
 import styles from '../styles/AboutPage.module.css';
+
+
+const profileURL = "https://res.cloudinary.com/dajuvlxyu/image/upload/v1720014606/profile_wruumb.jpg"
 
 const AboutMe = () => {
   const aboutText = (
@@ -29,7 +31,7 @@ const AboutMe = () => {
   return (
     <div className={styles.aboutContainer}>
       <div className={styles.profilePhotoContainer}>
-        <img src={profilePhoto} alt="Profile" className={styles.profilePhoto} />
+        <img src={profileURL} alt="Profile" className={styles.profilePhoto} />
       </div>
       <div className={styles.aboutText}>{aboutText}</div>
     </div>
