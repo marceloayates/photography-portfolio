@@ -28,3 +28,57 @@
   margin-bottom: 10px;
   /* No additional styles needed for vertical tabs */
 }
+
+/* FOR MOBILE MENU */
+.mobileMenu {
+  display: none;
+  color: rgb(135, 6, 6);
+}
+
+@media (max-width: 768px) {
+  .desktopMenu {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+  }
+
+  .mobileMenuOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  .mobileMenuContent {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+
+  .mobileMenuTabs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobileMenuTab {
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+  }
+}
+

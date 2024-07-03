@@ -5,41 +5,56 @@ import GridView from './GridView';
 import Modal from './Modal';
 
 const GalleryPage = ({ title, photos }) => {
-    const [activePhotoIndex, setActivePhotoIndex] = useState(0);
-    const [isGridView, setIsGridView] = useState(false);
+  const [activePhotoIndex, setActivePhotoIndex] = useState(0);
+  const [isGridView, setIsGridView] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-    useEffect(() => {
-      // Reset activePhotoIndex whenever the photos prop changes
-      setActivePhotoIndex(0);
-    }, [photos]);
+  useEffect(() => {
+    // Reset activePhotoIndex whenever the photos prop changes
+    setActivePhotoIndex(0);
 
-    const handlePrevPhoto = () => {
-      setActivePhotoIndex((prevIndex) => (prevIndex === 0 ? photos.length - 1 : prevIndex - 1));
+    // Check if the user is on a mobile device
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as needed
     };
 
-    const handleNextPhoto = () => {
-      setActivePhotoIndex((prevIndex) => (prevIndex === photos.length - 1 ? 0 : prevIndex + 1));
+    handleResize(); // Check on initial load
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
     };
+  }, [photos]);
 
-    const activePhoto = photos[activePhotoIndex];
+  const handlePrevPhoto = () => {
+    setActivePhotoIndex((prevIndex) => (prevIndex === 0 ? photos.length - 1 : prevIndex - 1));
+  };
 
-    const [showModal, setShowModal] = useState(false);
+  const handleNextPhoto = () => {
+    setActivePhotoIndex((prevIndex) => (prevIndex === photos.length - 1 ? 0 : prevIndex + 1));
+  };
 
-    const toggleModal = () => {
-      setShowModal((prevState) => !prevState);
-    };
+  const activePhoto = photos[activePhotoIndex];
 
-    const toggleGridView = () => {
-      setIsGridView((prevState) => !prevState);
-    };
+  const [showModal, setShowModal] = useState(false);
 
-    const handleGridImageClick = (photo) => {
-      setActivePhotoIndex(photos.indexOf(photo));
-      toggleModal();
-    };
+  const toggleModal = () => {
+    setShowModal((prevState) => !prevState);
+  };
 
-    return (
-        <div>
+  const toggleGridView = () => {
+    setIsGridView((prevState) => !prevState);
+  };
+
+  const handleGridImageClick = (photo) => {
+    setActivePhotoIndex(photos.indexOf(photo));
+    toggleModal();
+  };
+
+  return (
+    <div>
+      {!isMobile && (
+        <>
           <NavigationControls
             handlePrevPhoto={handlePrevPhoto}
             handleNextPhoto={handleNextPhoto}
@@ -48,26 +63,38 @@ const GalleryPage = ({ title, photos }) => {
             toggleGridView={toggleGridView}
             isGridView={isGridView}
           />
-        {isGridView ? (
-          <GridView
-            photos={photos}
-            handleGridImageClick={handleGridImageClick}
-            toggleGridView={toggleGridView}
-          />
-        ) : (
-          <CarouselView
-            photos={photos}
-            activePhotoIndex={activePhotoIndex}
-            handlePrevPhoto={handlePrevPhoto}
-            handleNextPhoto={handleNextPhoto}
-            toggleGridView={toggleGridView}
-          />
-        )}
-        {showModal && (
-          <Modal activePhoto={activePhoto} toggleModal={toggleModal} />
-        )}
-      </div>
-    );
+          {isGridView ? (
+            <GridView
+              photos={photos}
+              handleGridImageClick={handleGridImageClick}
+              toggleGridView={toggleGridView}
+            />
+          ) : (
+            <CarouselView
+              photos={photos}
+              activePhotoIndex={activePhotoIndex}
+              handlePrevPhoto={handlePrevPhoto}
+              handleNextPhoto={handleNextPhoto}
+              toggleGridView={toggleGridView}
+            />
+          )}
+        </>
+      )}
+      {isMobile && (
+        <div>
+          {photos.map((photo) => (
+            <img
+              key={photo.id}
+              src={photo.url}
+              alt={photo.category}
+              style={{ maxWidth: '100%', display: 'block', marginBottom: '1rem', marginTop: '1rem'}}
+            />
+          ))}
+        </div>
+      )}
+      {!isMobile && showModal && <Modal activePhoto={activePhoto} toggleModal={toggleModal} />}
+    </div>
+  );
 };
 
 export default GalleryPage;

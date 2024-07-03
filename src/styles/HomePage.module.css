@@ -3,12 +3,20 @@
   height: calc(100vh - 64px); /* Adjust the height as needed */
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
 }
 
 .homepageImage {
-  max-width: 90vw; /* Use 90% of the viewport width */
-  max-height: 85vh; /* Use 80% of the viewport height */
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+@media (max-width: 768px) {
+  .homepageContainer {
+    height: auto;
+    padding-top: 64px; /* Adjust the value as needed */
+  }
+}
+
+

@@ -14,6 +14,18 @@
   text-decoration: none;
 }
 
+.mobileTitle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: rgb(135, 6, 6);
+  padding: 15px;
+  text-align: left;
+  z-index: 1000; /* Ensure the title is on top of other elements */
+}
+
+
 .contentContainer {
   display: flex;
   justify-content: space-between;

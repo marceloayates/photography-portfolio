@@ -20,7 +20,7 @@ function App() {
         <Router>
             <GlobalStyles />
             <div className={styles.app}>
-                <Link to="/" className={styles.title}>
+            <Link to="/" className={`${styles.title} ${styles.mobileTitle}`}>
                     Marcelo Yates
                 </Link>
                 <div className={styles.contentContainer}>
