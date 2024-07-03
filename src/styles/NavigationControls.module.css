@@ -1,11 +1,8 @@
 .navigationContainer {
   display: flex;
   align-items: center;
-  gap: 1rem;
   margin-bottom: 1rem;
   align-self: flex-start; /* Add this line */
-  max-width: 800px; /* Add this line */
-  width: 800px; /* Add this line */
 }
 
 .navigationLink {
@@ -24,7 +21,8 @@
 .imageIndexText {
   color: #000;
   padding: 0.5rem 1rem;
-  border-radius: 4px;
+  font-size: 0.8rem;
+  font-style: italic;
 }
 
 .gridToggleIcon {
@@ -36,4 +34,8 @@
 
 .gridToggleIcon:hover {
   color: rgb(135, 6, 6);
+}
+
+.separator {
+  color: #000;
 }

@@ -13,10 +13,11 @@ const NavigationControls = ({
   return (
     <div className={styles.navigationContainer}>
       <span className={styles.navigationLink} onClick={handlePrevPhoto}>Previous</span>
+      <span className={styles.separator}>/</span>
       <span className={styles.navigationLink} onClick={handleNextPhoto}>Next</span>
-      <span className={styles.imageIndexText}>
-        {activePhotoIndex + 1} out of {totalPhotos}
-      </span>
+      (<span className={styles.imageIndexText}>
+          {`(${activePhotoIndex + 1} out of ${totalPhotos})`}
+        </span>)
       <span className={styles.gridToggleIcon} onClick={toggleGridView}>{isGridView ? <FaTimes /> : <FaThLarge />}</span>
     </div>
   );

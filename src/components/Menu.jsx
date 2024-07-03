@@ -7,9 +7,6 @@ const Tabs = () => {
     return (
         <div>
             <nav className={styles.tabs}>
-                <NavLink to="/" className={styles.tabs}>
-                    Home
-                </NavLink>
                 <NavLink to="/landscape" className={styles.tabs}>
                     Landscape
                 </NavLink>
@@ -27,7 +24,7 @@ const Tabs = () => {
                 <a href="https://www.instagram.com/shots.by.marcelo" target="_blank" rel="noopener noreferrer">
                     <FaInstagram size={24} />
                 </a>
-                <p style={{ color: 'black', fontSize: '0.5rem', fontStyle: 'italic' }}>
+                <p style={{ color: 'black', fontSize: '0.8rem', fontStyle: 'italic' }}>
                 © Copyright Marcelo Yates 2024
                 </p>
             </div>

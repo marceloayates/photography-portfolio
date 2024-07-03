@@ -11,15 +11,24 @@
   z-index: 1000;
 }
 
-.content {
-  max-width: 90%;
-  max-height: 90%;
-  background-color: white;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+.image {
+  max-width: 95vw; /* Use viewport width units */
+  max-height: 95vh;
+  object-fit: contain;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.image {
-  max-width: 100%;
-  max-height: 100%;
+.closeIconContainer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.closeIcon {
+  font-size: 24px;
+  color: #333;
 }

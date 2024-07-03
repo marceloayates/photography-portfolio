@@ -9,8 +9,8 @@
 }
 
 .photoImage {
-  max-width: 800px; /* Add this line */
-  max-height: 100%;
+  max-width: 90vw; /* Use 90% of the viewport width */
+  max-height: 80vh; /* Use 80% of the viewport height */
   object-fit: contain;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   align-self: flex-start
