@@ -4,7 +4,7 @@
   grid-auto-rows: minmax(250px, auto);
   grid-gap: .5rem;
   max-width: 1600px;
-  width: 100%;
+  width: 80vw;
 }
 
 .gridItem {
