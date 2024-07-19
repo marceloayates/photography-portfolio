@@ -2,17 +2,16 @@
 .app {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
   display: flex;
   flex-direction: column;
 }
 
 .title {
   margin: 0;
-  font-family: 'Times New Roman', serif;
   color: rgb(135, 6, 6);
   font-size: 24px;
   text-decoration: none;
+  padding-top: .5rem;
 }
 
 .contentContainer {

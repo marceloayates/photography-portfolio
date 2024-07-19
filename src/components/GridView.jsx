@@ -5,7 +5,8 @@ const GridView = ({ photos, handleGridImageClick, toggleGridView }) => {
   const getRandomPosition = () => {
     const positions = ['top', 'right', 'bottom', 'left'];
     const randomIndex = Math.floor(Math.random() * positions.length);
-    return positions[randomIndex];
+    const randomOffset = Math.floor(Math.random() * 10) + 'px'; // Generates a random offset between 0-10px
+    return { position: positions[randomIndex], offset: randomOffset };
   };
 
   return (
@@ -24,7 +25,7 @@ const GridView = ({ photos, handleGridImageClick, toggleGridView }) => {
                 src={photo.url}
                 alt={photo.category}
                 style={{
-                  [randomPosition]: 0,
+                  [randomPosition.position]: randomPosition.offset,
                 }}
               />
             </div>

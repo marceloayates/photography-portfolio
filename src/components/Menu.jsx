@@ -18,17 +18,23 @@ const Menu = () => {
     <div>
       <div className={styles.desktopMenu}>
         <nav className={styles.tabs}>
-          <NavLink to="/Abstract" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs}>
+          <NavLink to="/abstract" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs}>
             Abstract
           </NavLink>
-          <NavLink to="/landscape" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs}>
-            Landscape
-          </NavLink>
+          {/* <NavLink to="/places" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs}>
+            Places
+          </NavLink> */}
           <NavLink to="/monochrome" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs}>
             Monochrome
           </NavLink>
+          <NavLink to="/people" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs}>
+            People
+          </NavLink>
           <NavLink to="/portraits" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs}>
             Portraits
+          </NavLink>
+          <NavLink to="/studio" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs}>
+            Studio
           </NavLink>
           <NavLink to="/about" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs}>
             About

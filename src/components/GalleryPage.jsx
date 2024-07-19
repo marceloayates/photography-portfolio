@@ -3,6 +3,7 @@ import NavigationControls from './NavigationControls';
 import CarouselView from './CarouselView';
 import GridView from './GridView';
 import Modal from './Modal';
+import '../styles/GalleryPage.module.css';
 
 const GalleryPage = ({ title, photos }) => {
   const [activePhotoIndex, setActivePhotoIndex] = useState(0);
@@ -52,7 +53,7 @@ const GalleryPage = ({ title, photos }) => {
   };
 
   return (
-    <div>
+    <div className="gallery-page">
       {!isMobile && (
         <>
           <NavigationControls

@@ -41,10 +41,15 @@ const photoData = [
   { id: 3, category: 'people', url: "https://res.cloudinary.com/dajuvlxyu/image/upload/v1720014605/people3_y20qot.jpg", subtitle: '' },
   { id: 4, category: 'people', url: "https://res.cloudinary.com/dajuvlxyu/image/upload/v1720014605/people4_ibxxt5.jpg", subtitle: '' },
   { id: 5, category: 'people', url: "https://res.cloudinary.com/dajuvlxyu/image/upload/v1720014606/people5_c3nhyn.jpg", subtitle: '' },
-  { id: 6, category: 'portrait', url: "https://res.cloudinary.com/dajuvlxyu/image/upload/v1720014606/portrait1_ymzw3w.jpg", subtitle: '' },
+  // { id: 6, category: 'portrait', url: "https://res.cloudinary.com/dajuvlxyu/image/upload/v1720014606/portrait1_ymzw3w.jpg", subtitle: '' },
   { id: 7, category: 'portrait', url: "https://res.cloudinary.com/dajuvlxyu/image/upload/v1720014606/portrait2_sx2kih.jpg", subtitle: '' },
-  { id: 8, category: 'portrait', url: "https://res.cloudinary.com/dajuvlxyu/image/upload/v1720014606/portrait3_od67xm.jpg", subtitle: '' },
+  // { id: 8, category: 'portrait', url: "https://res.cloudinary.com/dajuvlxyu/image/upload/v1720014606/portrait3_od67xm.jpg", subtitle: '' },
   { id: 9, category: 'portrait', url: "https://res.cloudinary.com/dajuvlxyu/image/upload/v1720014606/portrait4_bd1tfb.jpg", subtitle: '' },
+  { id: 10, category: 'studio', url: "https://res.cloudinary.com/dajuvlxyu/image/upload/v1720156940/terri-23_ztkorv.jpg", subtitle: '' },
+  { id: 13, category: 'studio', url: "https://res.cloudinary.com/dajuvlxyu/image/upload/v1720156989/terri-15_mfyppl.jpg", subtitle: '' },
+  { id: 11, category: 'portrait', url: "https://res.cloudinary.com/dajuvlxyu/image/upload/v1720156940/terri-24_phbhdk.jpg", subtitle: '' },
+  { id: 12, category: 'studio', url: "https://res.cloudinary.com/dajuvlxyu/image/upload/v1720156995/terri-10_pzu8iz.jpg", subtitle: '' },
+  { id: 14, category: 'studio', url: "https://res.cloudinary.com/dajuvlxyu/image/upload/v1720156941/terri-19_vmboqk.jpg", subtitle: '' },
 ];
 
 export default photoData;
