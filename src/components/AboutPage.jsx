@@ -7,9 +7,9 @@ const profileURL = "https://res.cloudinary.com/dajuvlxyu/image/upload/v172001460
 const AboutMe = () => {
   const aboutText = (
     <>
-      <h2>Hello!</h2>
+      <h1 className={styles.pageTitle}>Professional Photography Services in Austin</h1>
       <p>
-        With over 15 years of seasoned expertise in photography and a comprehensive education from the Austin School of Photography, I bring a refined skill set and an unwavering commitment to capturing compelling images. I meticulously craft images by using and combining different techniques involving the three main constructs in photography: time, depth of field, and light.
+        Hello! With over 15 years of seasoned expertise in photography and a comprehensive education from the Austin School of Photography, I bring a refined skill set and an unwavering commitment to capturing compelling images. I meticulously craft images by using and combining different techniques involving the three main constructs in photography: time, depth of field, and light.
       </p>
       <h3>Services offered:</h3>
       <ul>
