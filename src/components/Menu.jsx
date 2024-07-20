@@ -19,25 +19,25 @@ const Menu = () => {
       <div className={styles.desktopMenu}>
         <nav className={styles.tabs}>
           <NavLink to="/special_projects" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs}>
-            Special Projects
+            <h2>Special Projects</h2>
           </NavLink>
           <NavLink to="/abstract" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs}>
-            Abstract
+            <h2>Abstract</h2>
           </NavLink>
           <NavLink to="/monochrome" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs}>
-            Monochrome
+            <h2>Monochrome</h2>
           </NavLink>
           <NavLink to="/people" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs}>
-            People
+            <h2>People</h2>
           </NavLink>
           <NavLink to="/studio" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs}>
-            Studio
+            <h2>Studio</h2>
           </NavLink>
           <NavLink to="/about" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs}>
-            About
+            <h2>About</h2>
           </NavLink>
           <NavLink to="/contact" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs}>
-            Contact
+            <h2>Contact</h2>
           </NavLink>
         </nav>
         <div>

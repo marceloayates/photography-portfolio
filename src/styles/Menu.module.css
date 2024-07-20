@@ -12,6 +12,13 @@
   font-size: 14px;
 }
 
+.tabs h2 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  padding: 0;
+}
+
 .tabs a {
   text-decoration: none;
   color: #333;
