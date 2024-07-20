@@ -8,6 +8,16 @@
   width: 100%;
 }
 
+.mobileInfoText {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .mobileInfoText {
+    padding-top: 30px;
+  }
+}
+
 .formGroup {
   display: flex;
   flex-direction: column;
@@ -26,7 +36,6 @@
 .formGroup textarea {
   min-height: 150px;
 }
-
 
 .submitBtn {
   background-color: #007bff;

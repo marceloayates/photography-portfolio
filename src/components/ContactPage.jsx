@@ -22,7 +22,7 @@ const ContactForm = () => {
 
   return (
     <div className={styles.contactPage}>
-      <p>Please provide the information below so we can discuss your needs. I will get back to you within 24 hours.</p>
+      <p className={styles.mobileInfoText}>Please provide the information below so we can discuss your needs. I will get back to you within 24 hours.</p>
       {successMessage && <div className={styles.successMessage}>{successMessage}</div>}
       <form className={styles.contactForm} onSubmit={sendEmail}>
         <input type="hidden" name="contact_number" />

@@ -55,21 +55,27 @@ const Menu = () => {
         {isMobileMenuOpen && (
           <div className={styles.mobileMenuOverlay} onClick={closeMobileMenu}>
             <div className={styles.mobileMenuContent} onClick={(e) => e.stopPropagation()}>
-              <nav className={styles.mobileMenuTabs}>
-                <NavLink to="/Abstract" className={styles.mobileMenuTab} onClick={closeMobileMenu}>
+              <nav className={`${styles.mobileMenuTabs} ${styles.tabs}`}>
+                <NavLink to="/special_projects" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs} onClick={closeMobileMenu}>
+                  Special Projects
+                </NavLink>
+                <NavLink to="/abstract" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs} onClick={closeMobileMenu}>
                   Abstract
                 </NavLink>
-                <NavLink to="/landscape" className={styles.mobileMenuTab} onClick={closeMobileMenu}>
-                  Landscape
-                </NavLink>
-                <NavLink to="/monochrome" className={styles.mobileMenuTab} onClick={closeMobileMenu}>
+                <NavLink to="/monochrome" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs} onClick={closeMobileMenu}>
                   Monochrome
                 </NavLink>
-                <NavLink to="/portraits" className={styles.mobileMenuTab} onClick={closeMobileMenu}>
-                  Portraits
+                <NavLink to="/people" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs} onClick={closeMobileMenu}>
+                  People
                 </NavLink>
-                <NavLink to="/about" className={styles.mobileMenuTab} onClick={closeMobileMenu}>
+                <NavLink to="/studio" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs} onClick={closeMobileMenu}>
+                  Studio
+                </NavLink>
+                <NavLink to="/about" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs} onClick={closeMobileMenu}>
                   About
+                </NavLink>
+                <NavLink to="/contact" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs} onClick={closeMobileMenu}>
+                  Contact
                 </NavLink>
               </nav>
             </div>

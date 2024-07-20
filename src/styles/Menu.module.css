@@ -70,8 +70,9 @@
   }
 
   .mobileMenuTabs {
-    display: flex;
-    flex-direction: column;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding-right: 1rem;
   }
 
   .mobileMenuTab {

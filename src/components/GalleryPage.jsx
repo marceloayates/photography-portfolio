@@ -88,7 +88,7 @@ const GalleryPage = ({ title, photos }) => {
               key={photo.id}
               src={photo.url}
               alt={photo.category}
-              style={{ maxWidth: '100%', display: 'block', marginBottom: '1rem', marginTop: '1rem'}}
+              style={{ maxWidth: '100%', display: 'block', marginBottom: '1rem', marginTop: '2.5rem'}}
             />
           ))}
         </div>
