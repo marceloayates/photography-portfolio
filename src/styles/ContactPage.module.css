@@ -1,48 +1,54 @@
 .contactPage {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 1000px;
+  padding-left: 2.5rem;
   color: #000;
 }
 
 .contactForm {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
 }
 
 .formGroup {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 20px;
-}
-
-.formGroup label {
-  font-weight: bold;
-  margin-bottom: 5px;
 }
 
 .formGroup input,
 .formGroup textarea {
-  padding: 10px;
+  width: 65vw;
+  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
 }
 
 .formGroup textarea {
-  resize: vertical;
   min-height: 150px;
 }
+
 
 .submitBtn {
   background-color: #007bff;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 24px; /* Slightly increased padding */
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  align-self: flex-start; /* Aligns button to the left */
 }
 
 .submitBtn:hover {
   background-color: #0056b3;
 }
+
+.successMessage {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+

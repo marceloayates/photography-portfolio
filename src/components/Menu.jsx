@@ -36,6 +36,9 @@ const Menu = () => {
           <NavLink to="/about" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs}>
             About
           </NavLink>
+          <NavLink to="/contact" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs}>
+            Contact
+          </NavLink>
         </nav>
         <div>
           <a href="https://www.instagram.com/shots.by.marcelo" target="_blank" rel="noopener noreferrer">

@@ -1,94 +1,54 @@
-import React, { useState } from 'react';
+import React, { useState }  from 'react';
 import styles from '../styles/ContactPage.module.css';
+import emailjs from 'emailjs-com';
+
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-  });
+  const [successMessage, setSuccessMessage] = useState('');
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
+  function sendEmail(e) {
     e.preventDefault();
 
-    try {
-      const response = await fetch('/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        alert('Message sent successfully!');
-        setFormData({ name: '', email: '', phone: '', message: '' });
-      } else {
-        alert('Failed to send message. Please try again.');
-      }
-    } catch (error) {
-      console.error('Error sending message:', error);
-      alert('An error occurred. Please try again later.');
-    }
-  };
+    emailjs.sendForm('service_rrfhjpc', 'template_r5bnmlo', e.target, 'ypgUcuvM-YC3jlmDZ')
+    .then((result) => {
+      console.log('Email sent successfully');
+      setSuccessMessage('Thank you! Your message has been sent successfully.');
+      e.target.reset(); // Clear the form
+    }, (error) => {
+      console.log(error.text);
+      setSuccessMessage(''); // Clear any previous success message
+    });
+  }
 
   return (
     <div className={styles.contactPage}>
-      <h2>Contact Me</h2>
-      <form onSubmit={handleSubmit} className={styles.contactForm}>
+      <p>Please provide the information below so we can discuss your needs. I will get back to you within 24 hours.</p>
+      {successMessage && <div className={styles.successMessage}>{successMessage}</div>}
+      <form className={styles.contactForm} onSubmit={sendEmail}>
+        <input type="hidden" name="contact_number" />
         <div className={styles.formGroup}>
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+          <label>Name</label>
+          <input type="text" name="from_name" />
         </div>
         <div className={styles.formGroup}>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
+          <label>Email</label>
+          <input type="email" name="from_email" />
         </div>
         <div className={styles.formGroup}>
-          <label htmlFor="phone">Phone:</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-          />
+          <label>Subject</label>
+          <input type="text" name="subject" />
         </div>
         <div className={styles.formGroup}>
-          <label htmlFor="message">Message:</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
+          <label>Message</label>
+          <textarea name="message" />
         </div>
-        <button type="submit" className={styles.submitBtn}>
-          Send Message
-        </button>
+        <button type="submit" className={styles.submitBtn}>Send</button>
       </form>
     </div>
   );
+
+
+
 };
 
 export default ContactForm;

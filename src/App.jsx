@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import GalleryPage from './components/GalleryPage';
-// import ContactPage from './components/ContactPage';
+import ContactPage from './components/ContactPage';
 import AboutPage from './components/AboutPage';
 import Menu from './components/Menu';
 import photoData from './photoData.jsx';
@@ -57,10 +57,10 @@ function App() {
                         <div className={styles.contentContainer}>
                             <GalleryPage title="Studio Photography" photos={studioPhotos} />
                         </div>} />
-                    {/* <Route path="/contact" element={
+                    <Route path="/contact" element={
                         <div className={styles.contentContainer}>
                             <ContactPage />
-                        </div>} /> */}
+                        </div>} />
                     <Route path="/about" element={
                         <div className={styles.contentContainer}>
                             <AboutPage />
