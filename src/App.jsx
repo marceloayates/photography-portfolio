@@ -16,6 +16,7 @@ function App() {
     const peoplePhotos = photoData.filter(photo => photo.category === 'people');
     const portraitPhotos = photoData.filter(photo => photo.category === 'portrait');
     const studioPhotos = photoData.filter(photo => photo.category ==='studio');
+    const specialProjectPhotos = photoData.filter(photo => photo.category ==='special_project');
 
     return (
         <Router>
@@ -28,6 +29,10 @@ function App() {
                     <Menu />
                     <Routes>
                     <Route path="/" element={<HomePage />} />
+                    <Route path="/special_projects" element={
+                        <div className={styles.contentContainer}>
+                            <GalleryPage title="Special Projects" photos={specialProjectPhotos} />
+                        </div>} />
                     <Route path="/abstract" element={
                         <div className={styles.contentContainer}>
                             <GalleryPage title="Abstract Photography" photos={abstractPhotos} />
