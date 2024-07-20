@@ -19,7 +19,7 @@
 }
 
 .pageTitle {
-  font-size: 26px; /* Adjust this value as needed */
+  font-size: 24px; /* Adjust this value as needed */
   margin-bottom: 20px;
 }
 
@@ -30,20 +30,9 @@
   line-height: 1.6;
 }
 
-.aboutText h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  margin: 0 0 20px 0; /* Updated rule */
-
-}
-
 .aboutText h3 {
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 10px;
-}
-
-.aboutText p {
-  margin-bottom: 20px;
 }
 
 .aboutText ul {

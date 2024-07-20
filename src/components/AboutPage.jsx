@@ -8,16 +8,14 @@ const AboutMe = () => {
   const aboutText = (
     <>
       <h1 className={styles.pageTitle}>Professional Photography Services in Austin</h1>
-      <p>
-        Hello! With over 15 years of seasoned expertise in photography and a comprehensive education from the Austin School of Photography, I bring a refined skill set and an unwavering commitment to capturing compelling images. I meticulously craft images by using and combining different techniques involving the three main constructs in photography: time, depth of field, and light.
-      </p>
+      <p>Hello! My name is Marcelo Yates.</p>
+      <p>With over 15 years of expertise in photography and a comprehensive education from the Austin School of Photography, I bring a refined skill set and an unwavering commitment to capturing compelling images. I carefully craft images by using and combining different techniques involving the three main constructs in photography: time, depth of field, and light.</p>
       <h3>Services offered:</h3>
       <ul>
-        <li>Portrait</li>
-        <li>Creative studio shoot</li>
-        <li>Outdoor shoot</li>
+        <li>Indoor/Outdoor Portrait</li>
+        <li>Creative Studio Work</li>
+        <li>Corporate Headshot</li>
         <li>Couples</li>
-        <li>Corporate headshot</li>
         <li>Events</li>
         <li>Sports</li>
       </ul>
