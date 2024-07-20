@@ -25,6 +25,10 @@
   font-style: italic;
 }
 
+.photographsText {
+  padding: 0.5rem 1rem;
+}
+
 .gridToggleIcon {
   color: #000;
   cursor: pointer;

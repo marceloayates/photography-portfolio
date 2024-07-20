@@ -22,7 +22,10 @@ const NavigationControls = ({
           </span>
         </>
       )}
-      <span className={styles.gridToggleIcon} onClick={toggleGridView}>{isGridView ? <FaTimes /> : <FaThLarge />}</span>
+      {isGridView && <span className={styles.photographsText}>Photographs</span>}
+      <span className={styles.gridToggleIcon} onClick={toggleGridView}>
+        {isGridView ? <FaTimes /> : <FaThLarge />}
+      </span>
     </div>
   );
 };

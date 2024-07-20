@@ -8,13 +8,19 @@
   height: 100%;
 }
 
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 .photoImage {
   max-width: 90vw; /* Use 90% of the viewport width */
   max-height: 80vh; /* Use 80% of the viewport height */
   height: auto;
   object-fit: contain;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  align-self: flex-start
+  align-self: flex-start;
+  animation: fadeInOut .5s ease-in-out;
 }
 
 .subtitleText {
