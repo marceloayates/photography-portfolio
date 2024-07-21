@@ -7,7 +7,7 @@ const profileURL = "https://res.cloudinary.com/dajuvlxyu/image/upload/v172001460
 const AboutMe = () => {
   const aboutText = (
     <>
-      <h1 className={styles.pageTitle}>Professional Photography Services in Austin</h1>
+      <h1 className={styles.pageTitle}>Professional Photography Services <br></br>in the Austin, TX area</h1>
       <p>Hello! My name is Marcelo Yates.</p>
       <p>With over 15 years of expertise in photography and a comprehensive education from the Austin School of Photography, I bring a refined skill set and an unwavering commitment to capturing compelling images. I carefully craft images by using and combining different techniques involving the three main constructs in photography: time, depth of field, and light.</p>
       <h3>Services offered:</h3>
