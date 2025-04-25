@@ -2,8 +2,6 @@
 
 This photography portfolio showcases the work of Marcelo.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Live Site
 
 Visit the live site at [www.shotsbymarcelo.com](https://www.shotsbymarcelo.com) to see the full portfolio.
