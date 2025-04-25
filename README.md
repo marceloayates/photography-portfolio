@@ -1,6 +1,7 @@
 # Photography Portfolio by Marcelo
 
 This photography portfolio showcases the work of Marcelo.
+Visit Github Repository at [https://github.com/marceloayates/photography-portfolio]
 
 ## Live Site
 
