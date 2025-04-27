@@ -2,7 +2,8 @@ import React from 'react';
 // import homepageImage from '../assets/homepage-image.jpg'; // Import your homepage image
 import styles from '../styles/HomePage.module.css';
 
-const homepageImageURL = "https://res.cloudinary.com/dajuvlxyu/image/upload/v1720063428/homepage-image_rxjzm5.jpg"
+// const homepageImageURL = "https://res.cloudinary.com/dajuvlxyu/image/upload/v1720063428/homepage-image_rxjzm5.jpg"
+const homepageImageURL = "https://res.cloudinary.com/dajuvlxyu/image/upload/v1745715123/IMG_4187_gdcftn.jpg";
 
 const HomePage = () => {
   return (
