@@ -7,6 +7,8 @@ const photoData = [
   { id: 6, category: 'abstract', url: "https://res.cloudinary.com/dajuvlxyu/image/upload/v1720014599/abstract6_tts8up.jpg", subtitle: '' },
   { id: 7, category: 'abstract', url: "https://res.cloudinary.com/dajuvlxyu/image/upload/v1720014600/abstract7_xycou5.jpg", subtitle: '' },
   { id: 8, category: 'abstract', url: "https://res.cloudinary.com/dajuvlxyu/image/upload/v1720014600/abstract8_ak37rh.jpg", subtitle: '' },
+  { id: 9, category: 'abstract', url: "https://res.cloudinary.com/dajuvlxyu/image/upload/v1748190193/IMG_4375-2_rhujb9.jpg", subtitle: '' },
+  { id: 10, category: 'abstract', url: "https://res.cloudinary.com/dajuvlxyu/image/upload/v1748190192/IMG_4382-2_hyuuht.jpg", subtitle: '' },
   { id: 1, category: 'landscape', url: "https://res.cloudinary.com/dajuvlxyu/image/upload/v1720014601/landscape1_sbq43t.jpg", subtitle: '' },
   { id: 2, category: 'landscape', url: "https://res.cloudinary.com/dajuvlxyu/image/upload/v1720014600/landscape2_umvlby.jpg", subtitle: '' },
   { id: 3, category: 'landscape', url: "https://res.cloudinary.com/dajuvlxyu/image/upload/v1720014600/landscape3_kxvqqt.jpg", subtitle: '' },
