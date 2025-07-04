@@ -16,7 +16,6 @@
 
 .contentContainer {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
   width: 80vw;
   margin-top: 0; /* Remove the top margin */

@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
 import styles from '../styles/Menu.module.css';
-import { FaInstagram, FaBars } from 'react-icons/fa';
+import { FaInstagram, FaBars, FaUser } from 'react-icons/fa';
 
 const Menu = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { isAuthenticated } = useAuth();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -41,9 +43,14 @@ const Menu = () => {
           </NavLink>
         </nav>
         <div>
-          <a href="https://www.instagram.com/shots.by.marcelo" target="_blank" rel="noopener noreferrer">
-            <FaInstagram size={24} />
-          </a>
+          <div className={styles.iconContainer}>
+            <a href="https://www.instagram.com/shots.by.marcelo" target="_blank" rel="noopener noreferrer">
+              <FaInstagram size={24} />
+            </a>
+            <NavLink to={isAuthenticated ? "/admin" : "/login"} className={styles.adminIcon}>
+              <FaUser size={20} />
+            </NavLink>
+          </div>
           <p style={{ color: 'black', fontSize: '0.8rem', fontStyle: 'italic' }}>
             © Copyright Marcelo Yates 2024
           </p>
@@ -76,6 +83,9 @@ const Menu = () => {
                 </NavLink>
                 <NavLink to="/contact" className={({ isActive }) => isActive ? `${styles.tabs} ${styles.active}` : styles.tabs} onClick={closeMobileMenu}>
                   Contact
+                </NavLink>
+                <NavLink to={isAuthenticated ? "/admin" : "/login"} className={styles.adminLink} onClick={closeMobileMenu}>
+                  <FaUser size={16} /> Admin
                 </NavLink>
               </nav>
             </div>

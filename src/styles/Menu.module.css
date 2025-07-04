@@ -89,3 +89,35 @@
   }
 }
 
+/* Admin icon styles */
+.iconContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.adminIcon {
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.adminIcon:hover {
+  color: rgb(135, 6, 6);
+}
+
+.adminLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+  text-decoration: none;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+  margin-top: 10px;
+}
+
+.adminLink:hover {
+  color: rgb(135, 6, 6);
+}
+

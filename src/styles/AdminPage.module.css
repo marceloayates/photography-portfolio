@@ -1,0 +1,403 @@
+.adminContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: white;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.adminHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.adminHeader h1 {
+  color: #333;
+  margin: 0;
+}
+
+.logoutButton {
+  padding: 0.5rem 1rem;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.logoutButton:hover {
+  background: #c82333;
+}
+
+/* Homepage Section */
+.homepageSection {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.homepageSection h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.currentHomepage {
+  margin-bottom: 1.5rem;
+}
+
+.currentHomepage h3 {
+  color: #555;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.currentHomepageImage {
+  max-width: 300px;
+  max-height: 200px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+}
+
+.orDivider {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.orDivider::before,
+.orDivider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+
+.orDivider span {
+  padding: 0 1rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.toggleButton {
+  padding: 0.75rem 1.5rem;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 1rem;
+}
+
+.toggleButton:hover {
+  background: #5a6268;
+}
+
+.existingPhotosSection {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.existingPhotosSection h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.existingPhotosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.existingPhotoCard {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.existingPhotoThumbnail {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.existingPhotoInfo p {
+  margin: 0.25rem 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.setHomepageButton {
+  padding: 0.4rem 0.8rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 0.5rem;
+}
+
+.setHomepageButton:hover {
+  background: #0056b3;
+}
+
+.uploadSection {
+  margin-bottom: 1.5rem;
+}
+
+.uploadSection h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #666;
+  font-weight: normal;
+  font-size: 0.9rem;
+}
+
+.fileInput,
+.textInput,
+.selectInput,
+.textArea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.fileInput:focus,
+.textInput:focus,
+.selectInput:focus,
+.textArea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.uploadButton {
+  padding: 0.6rem 1.2rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.uploadButton:hover {
+  background: #0056b3;
+}
+
+.uploadSuccess {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 4px;
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.uploadError {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 4px;
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.codeBlock {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  position: relative;
+}
+
+.codeBlock code {
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  word-break: break-all;
+  display: block;
+  margin-right: 60px;
+}
+
+.copyButton {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.copyButton:hover {
+  background: #0056b3;
+}
+
+.photoInfo {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  font-size: 0.9rem;
+}
+
+.preview {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.preview h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.previewImage {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.instructions {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 4px;
+  border-left: 4px solid #007bff;
+}
+
+.instructions h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.instructions ol {
+  color: #555;
+  line-height: 1.6;
+}
+
+.instructions li {
+  margin-bottom: 0.5rem;
+}
+
+/* Photo Management Section */
+.photoManagement {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #f0f0f0;
+}
+
+.photoManagement h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.categorySelector {
+  margin-bottom: 2rem;
+}
+
+.categorySelector label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.photoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.photoCard {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photoThumbnail {
+  width: 100%;
+  max-width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.photoCard .photoInfo {
+  text-align: center;
+  width: 100%;
+}
+
+.photoCard .photoInfo p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.deleteButton {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.deleteButton:hover {
+  background: #c82333;
+}
+
+@media (max-width: 768px) {
+  .photoGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .photoCard {
+    margin-bottom: 1rem;
+  }
+}

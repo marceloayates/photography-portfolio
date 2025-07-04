@@ -1,11 +1,32 @@
-import React from 'react';
-// import homepageImage from '../assets/homepage-image.jpg'; // Import your homepage image
+import React, { useState, useEffect } from 'react';
+import photoDataManager from '../utils/PhotoDataManager';
 import styles from '../styles/HomePage.module.css';
 
-// const homepageImageURL = "https://res.cloudinary.com/dajuvlxyu/image/upload/v1720063428/homepage-image_rxjzm5.jpg"
-const homepageImageURL = "https://res.cloudinary.com/dajuvlxyu/image/upload/v1745715123/IMG_4187_gdcftn.jpg";
-
 const HomePage = () => {
+  const [homepageImageURL, setHomepageImageURL] = useState('');
+
+  useEffect(() => {
+    const loadHomepageImage = () => {
+      const imageUrl = photoDataManager.getHomepageImage();
+      setHomepageImageURL(imageUrl);
+    };
+
+    loadHomepageImage();
+
+    // Listen for storage changes (when homepage image is updated)
+    const handleStorageChange = (e) => {
+      if (e.key === 'photography-portfolio-homepage-image') {
+        loadHomepageImage();
+      }
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+    };
+  }, []);
+
   return (
     <div className={styles.homepageContainer}>
       <img className={styles.homepageImage} src={homepageImageURL} alt="Homepage" />
